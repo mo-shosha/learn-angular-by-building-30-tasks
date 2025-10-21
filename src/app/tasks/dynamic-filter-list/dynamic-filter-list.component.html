@@ -1,0 +1,21 @@
+<div class="filter-container">
+  <h2>🔎 Dynamic Filter List</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="FilterText"
+    (input)="onFilterChange()"
+    placeholder="Type to filter..."
+    class="filter-input"
+  />
+
+  <ul class="item-list">
+    @for (item of FilteredItems; track $index) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+
+  @if (FilteredItems.length === 0) {
+    <p class="empty">No items found.</p>
+  }
+</div>

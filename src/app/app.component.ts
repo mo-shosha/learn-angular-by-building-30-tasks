@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TicTacToeComponent } from "./tasks/tic-tac-toe/tic-tac-toe.component";
+import { DynamicFilterListComponent } from "./tasks/dynamic-filter-list/dynamic-filter-list.component";
 @Component({
   selector: 'app-root',
-  imports: [FormsModule,TicTacToeComponent],
+  imports: [DynamicFilterListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
