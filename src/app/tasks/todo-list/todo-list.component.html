@@ -1,0 +1,32 @@
+<div class="to-do-container">
+  <h1>To Do List....<span class="typing">|</span></h1>
+
+  <input
+    type="text"
+    placeholder="Add a new task..."
+    [(ngModel)]="newTask"
+    (keyup.enter)="addTask()"
+  />
+
+  <div *ngIf="!loading; else loadingTemplate">
+    <div *ngIf="tasks.length > 0; else emptyState">
+      <div *ngFor="let task of tasks; let i = index" class="task">
+        <span>{{ task }}</span>
+        <button class="remove-btn" (click)="removeTask(i)">×</button>
+      </div>
+
+      <button class="remove-all" (click)="removeAllTasks()">Remove All Tasks</button>
+    </div>
+
+    <ng-template #emptyState>
+      <p class="empty">No tasks yet... Add one above!</p>
+    </ng-template>
+  </div>
+
+  <ng-template #loadingTemplate>
+    <div class="loading">
+      <div class="loader"></div>
+      <p>Loading...</p>
+    </div>
+  </ng-template>
+</div>

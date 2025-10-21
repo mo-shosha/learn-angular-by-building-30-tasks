@@ -1,0 +1,15 @@
+<div class="stopwatch-container">
+  <h1>Stopwatch.....<span class="typing">|</span></h1>
+
+  <div class="display">
+    <span>{{ formatTime(minutes) }}</span>:
+    <span>{{ formatTime(seconds) }}</span>.
+    <span class="ms">{{ formatTime(milliseconds / 10, 2) }}</span>
+  </div>
+
+  <div class="buttons">
+    <button class="btn start" (click)="start()" [disabled]="running">Start</button>
+    <button class="btn stop" (click)="stop()" [disabled]="!running">Stop</button>
+    <button class="btn reset" (click)="reset()" >Reset</button>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="guess-the-number-container">
+  <h1>Guess the number</h1>
+  <h2>Guess a number between 1 and 100</h2>
+
+  <input 
+    type="number" 
+    [(ngModel)]="userGuess" 
+    placeholder="Enter your guess" 
+  />
+
+  <button (click)="checkGuess()">Submit Guess</button>
+
+  @if (feedbackMessage) {
+    <p>{{ feedbackMessage }}</p>
+  }
+
+  <button (click)="resetGame()">🔁 Reset Game</button>
+</div>
