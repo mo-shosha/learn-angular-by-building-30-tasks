@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { GussTheNumberComponent } from "./tasks/guss-the-number/guss-the-number.component";
-
+import { TicTacToeComponent } from "./tasks/tic-tac-toe/tic-tac-toe.component";
 @Component({
   selector: 'app-root',
-  imports: [FormsModule, GussTheNumberComponent],
+  imports: [FormsModule,TicTacToeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

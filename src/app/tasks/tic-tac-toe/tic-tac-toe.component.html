@@ -1,1 +1,30 @@
-<p>tic-tac-toe works!</p>
+<div class="tic-tac-toe-container">
+  <h1>Tic Tac Toe</h1>
+
+  <div class="board">
+    <div
+      *ngFor="let cell of board; let i = index"
+      class="cell"
+      (click)="makeMove(i)">
+      {{ cell }}
+    </div>
+  </div>
+
+  <div class="status">
+    <p *ngIf="winner && winner !== 'Draw'">🏆 Winner: {{ winner }}</p>
+    <p *ngIf="winner === 'Draw'">It's a Draw</p>
+    <p *ngIf="!winner">Turn: {{ currentPlayer }}</p>
+  </div>
+
+  <button (click)="reset()">Reset</button>
+
+  <div *ngIf="showConfetti" class="confetti-container">
+    <div
+      *ngFor="let confetti of confettiPieces"
+      class="confetti"
+      [style.left]="confetti.left"
+      [style.background]="confetti.background"
+      [style.animationDelay]="confetti.animationDelay">
+    </div>
+  </div>
+</div>
