@@ -1,0 +1,26 @@
+<div class="game-container">
+  <img src="/images/paper.png" alt="Paper" (click)="selectChoice('Paper')"/>
+  <img src="/images/rock.webp" alt="Rock" (click)="selectChoice('Rock')"/>
+  <img src="/images/scissors.webp" alt="Scissors" (click)="selectChoice('Scissors')"/>
+</div>
+
+
+@if (resultMessage!=='') {
+  <div class="result">
+    <h2>Result</h2>
+
+    <div class="choices">
+      <div class="choice">
+        <p>Your choice</p>
+        <img [src]="getpath(userChoice!)" alt="user-choice" />
+      </div>
+
+      <div class="choice">
+        <p>Computer's choice</p>
+        <img [src]="getpath(computerChoice!)" alt="computer-choice" />
+      </div>
+    </div>
+
+    <h3 >{{ resultMessage }}</h3>
+  </div>
+}

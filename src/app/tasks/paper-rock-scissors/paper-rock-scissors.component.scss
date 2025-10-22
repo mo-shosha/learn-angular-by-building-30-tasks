@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f6f8fa, #e0e7ff);
+  min-height: 100vh;
+}
+
+/* Game buttons */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.game-container img {
+  width: 140px;
+  height: 140px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.game-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Result section */
+.result {
+  background: white;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 30px 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.result h2 {
+  margin-bottom: 25px;
+  color: #374151;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.choice p {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4b5563;
+}
+
+.choice img {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background: #f9fafb;
+  padding: 8px;
+}
+
+/* Result text colors */
+h3 {
+  margin-top: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h3.win {
+  color: #16a34a;
+}
+
+h3.lose {
+  color: #dc2626;
+}
+
+h3.draw {
+  color: #f59e0b;
+}
+
+
