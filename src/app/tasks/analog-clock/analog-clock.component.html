@@ -1,0 +1,21 @@
+<div class="clock-wrap" role="img" aria-label="Analog clock">
+  <div class="clock">
+    <!-- علامات الساعة -->
+    <ng-container *ngFor="let t of ticks; let i = index">
+      <div class="tick" [style.transform]="'rotate(' + (i * 30) + 'deg)'">
+        <div class="tick-inner"></div>
+      </div>
+    </ng-container>
+
+    <!-- عقارب الساعة -->
+    <div class="hand hour-hand" [style.transform]="'rotate(' + hourDeg + 'deg)'"></div>
+    <div class="hand minute-hand" [style.transform]="'rotate(' + minuteDeg + 'deg)'"></div>
+    <div class="hand second-hand" [style.transform]="'rotate(' + secondDeg + 'deg)'"></div>
+
+    <!-- النقطة المركزية -->
+    <div class="center-dot"></div>
+  </div>
+
+  <!-- الوقت الرقمي -->
+  <div class="digital">{{ digitalTime }}</div>
+</div>

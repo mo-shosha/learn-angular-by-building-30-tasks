@@ -1,0 +1,119 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #1b2735, #090a0f);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* الغلاف العام للساعة */
+.clock-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.clock {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #fff 60%, #eaeaea 100%);
+  border: 6px solid #333;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1),
+              0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* علامات الساعة */
+.tick {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.tick-inner {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 4px;
+  height: 12px;
+  background: #333;
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+.tick:nth-child(3n) .tick-inner {
+  height: 20px;
+  background: #000;
+}
+
+/* العقارب */
+.hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: center bottom;
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.hour-hand {
+  width: 6px;
+  height: 60px;
+  background: #222;
+  border-radius: 6px;
+  z-index: 3;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 80px;
+  background: #111;
+  border-radius: 4px;
+  z-index: 4;
+}
+
+.second-hand {
+  width: 2px;
+  height: 90px;
+  background: #e02424;
+  border-radius: 2px;
+  z-index: 5;
+  transition: transform 0.05s linear;
+}
+
+/* النقطة المركزية */
+.center-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+/* الوقت الرقمي */
+/* الوقت الرقمي */
+.digital {
+  font-size: 1.3rem;
+  color: #00ffe0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(0, 255, 224, 0.6);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.digital:hover {
+  cursor: pointer ;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 224, 0.3);
+}
