@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AnalogClockComponent } from './tasks/analog-clock/analog-clock.component';
+import { FeedbackFormsComponent } from "./tasks/feedback-forms/feedback-forms.component";
 @Component({
   selector: 'app-root',
-  imports: [AnalogClockComponent,FormsModule],
+  imports: [FeedbackFormsComponent, FormsModule, FeedbackFormsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
